@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 //Screen
 import 'screens/wordScreen.dart';
 //models
-import 'models/words.dart';
+import '../models/words.dart';
 
 void main(List<String> args) {
   runApp(MyWords());

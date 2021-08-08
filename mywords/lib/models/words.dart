@@ -17,13 +17,14 @@ class Words with ChangeNotifier {
   List<Word> get wordsList => [..._wordsList];
 
   void AddWords(String arabic, english) {
-    wordsList.add(
+    _wordsList.add(
         Word(id: DateTime.now().toString(), aWord: arabic, eWord: english));
     notifyListeners();
   }
 
   void removeButton(String id) {
-    wordsList.removeWhere((element) => element.id == id);
+    print('Provider ${_wordsList.length}');
+    _wordsList.removeWhere((element) => element.id == id);
     notifyListeners();
   }
 }

@@ -21,6 +21,7 @@ class _WordScreenState extends State<WordScreen> {
   @override
   Widget build(BuildContext context) {
     final List<Word> _wordsList = Provider.of<Words>(context).wordsList;
+    print('Class ${_wordsList.length}');
     return Scaffold(
       backgroundColor: Theme.of(context).accentColor,
       appBar: AppBar(
@@ -44,9 +45,10 @@ class _WordScreenState extends State<WordScreen> {
             ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).primaryColor,
-        onPressed: () {
-          Provider.of<Words>(context, listen: false).AddWords;
-        },
+        onPressed: AddBottom,
+        // () {
+        //   Provider.of<Words>(context, listen: false).AddWords;
+        // },
         child: Icon(
           Icons.add,
           color: Colors.white,
